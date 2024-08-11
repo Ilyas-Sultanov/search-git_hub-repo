@@ -1,0 +1,7 @@
+@use '../../../styles/variables.scss' as *;
+
+.repoDescription {
+  width: 33.33333%;
+  padding: 24px 32px 24px 24px;
+  background-color: $darkish-white;
+}

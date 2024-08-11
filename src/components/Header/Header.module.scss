@@ -1,0 +1,18 @@
+@use '../../styles/variables.scss' as *;
+
+.header {
+  height: 80px;
+  background-color: $green;
+  padding: 19px 32px;
+}
+
+.form {
+  height: 100%;
+  width: 71%;
+  display: flex;
+  column-gap: 8px;
+}
+
+.textField {
+  flex: 1 1 0%;
+}

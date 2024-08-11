@@ -1,0 +1,13 @@
+@use '../../../styles/variables.scss' as *;
+
+.repoData {
+  width: 66.66666%;
+  padding: 24px 16px 0 32px;
+  background-color: $white;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+}

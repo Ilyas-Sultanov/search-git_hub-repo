@@ -3,3 +3,12 @@
 .app {
   height: 100%;
 }
+
+.main {
+  height: calc(100vh - 80px - 32px);
+}
+
+.footer {
+  height: 32px;
+  background-color: $brown;
+}
