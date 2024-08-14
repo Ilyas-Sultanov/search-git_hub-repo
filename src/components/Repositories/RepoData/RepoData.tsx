@@ -22,13 +22,13 @@ export function RepoData() {
   if (errorMsg) {
     content = <Typography component='p' className={classes.error}>{errorMsg}</Typography>
     console.error(errorMsg)
-  } else if (result === null) {
+  } else if (result === null && !isLoading) {
     content = <p className={classes.greetingsText}>Добро пожаловать</p>
   } else {
     content = (
       <>
         <h1 className={classes.title}>Результаты поиска</h1>
-        <RepoTable data={result.items ?? []} />
+        <RepoTable data={result?.items ?? []} />
         <RepoPagination />
         {isLoading ? (
           <Box className={classes.tableLoader}>
