@@ -1,0 +1,38 @@
+@use '../../../../styles/variables.scss' as *;
+
+.repoTableContainer {
+  flex: 1 1 0%;
+  box-shadow: none !important;
+  position: relative;
+}
+
+.thead {
+  background-color: $white;
+  position: sticky;
+  top: 0;
+}
+
+.sortable {
+  cursor: pointer;
+}
+
+.arrow {
+  margin-right: 4px;
+
+  &.desc {
+    transform: rotate(180deg);
+  }
+}
+
+.row {
+  cursor: pointer;
+
+  &.selected {
+    background-color:rgb(0, 0, 0, 0.08);
+  }
+
+  &:last-child td,
+  &:last-child th {
+    border: 0
+  }
+}

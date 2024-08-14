@@ -5,3 +5,61 @@
   padding: 24px 32px 24px 24px;
   background-color: $darkish-white;
 }
+
+.manualTextBox {
+  height: 100%;
+  display: flex;
+  align-items: center;justify-content: center;
+}
+
+.manualText {
+  color: $brown;
+}
+
+h3.title {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.languageStars {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.language {
+  background-color: $blue;
+  color: $white;
+  padding: 7px 10px;
+  border-radius: 100px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+
+.starsBox {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.stargazersCount {
+  padding-top: 3px;
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.topic {
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: rgb(0, 0, 0, 0.08);
+  border-radius: 100px;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  color: $black;
+}

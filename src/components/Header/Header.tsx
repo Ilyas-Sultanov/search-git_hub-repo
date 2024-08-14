@@ -1,18 +1,18 @@
-import { useSearchParams } from 'react-router-dom'
+import { FormEvent } from 'react'
 import { Box } from '@mui/material'
+import { setRepoSearchParams } from '@/store/slices/repositories/repositoriesSlice'
+import { useAppDispatch } from '@/store/store'
 import { Button } from '../ui/Button/Button'
 import { TextField } from '../ui/TextField/TextField'
 import classes from './Header.module.scss'
-import { FormEvent } from 'react'
 
 export function Header() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [_, setSearchParams] = useSearchParams()
+  const dispatch = useAppDispatch()
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     const value = ((e.target as HTMLFormElement).elements[0] as HTMLInputElement).value
-    setSearchParams({ q: `${value} in:name` })
+    dispatch(setRepoSearchParams({ q: value, page: 0 }))
   }
 
   return (

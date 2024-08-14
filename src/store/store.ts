@@ -1,17 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { useDispatch, useSelector, useStore } from 'react-redux'
-import { baseApi } from '@/api/baseApi'
+import { repositoriesReducer } from './slices/repositories/repositoriesSlice'
 
+/** Redux store приложения */
 export const store = configureStore({
   reducer: {
-    [baseApi.reducerPath]: baseApi.reducer,
+    repositories: repositoriesReducer,
   },
-  middleware: (getDefaultMiddleware) => {
-    return getDefaultMiddleware().concat(baseApi.middleware)
-  }
 })
 
+/** Тип стейта приложения */
 export type AppState = ReturnType<typeof store.getState>
+/** Тип функции dispatch приложения */
 export type AppDispatch = typeof store.dispatch
 
 export const useAppSelector = useSelector.withTypes<AppState>()
