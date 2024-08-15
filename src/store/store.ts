@@ -13,7 +13,9 @@ export const store = configureStore({
 export type AppState = ReturnType<typeof store.getState>
 /** Тип функции dispatch приложения */
 export type AppDispatch = typeof store.dispatch
-
+/** useSelector c типизированным параметром state */
 export const useAppSelector = useSelector.withTypes<AppState>()
+/** Хук возвращающий типизированный useDispatch */
 export const useAppDispatch = useDispatch.withTypes<AppDispatch>()
+/** Хук возвращающий типизированный store */
 export const useAppStore = useStore.withTypes<typeof store>

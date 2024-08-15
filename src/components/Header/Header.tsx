@@ -6,6 +6,7 @@ import { Button } from '../ui/Button/Button'
 import { TextField } from '../ui/TextField/TextField'
 import classes from './Header.module.scss'
 
+/** Header приложения */
 export function Header() {
   const dispatch = useAppDispatch()
 

@@ -5,6 +5,7 @@ import { repositoriesSlice } from '@/store/slices/repositories/repositoriesSlice
 import { StarIcon } from '@/components/ui/Icons'
 import classes from './RepoDescripton.module.scss'
 
+/** Компонент в котором отображается описание выбранного репозитория */
 export function RepoDescripton() {
   const repository = useAppSelector(repositoriesSlice.selectors.selectSelectedRepo)
   

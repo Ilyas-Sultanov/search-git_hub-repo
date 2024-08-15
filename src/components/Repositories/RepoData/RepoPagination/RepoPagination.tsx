@@ -3,6 +3,7 @@ import { TablePagination } from '@mui/material'
 import { repositoriesSlice, setRepoSearchParams } from '@/store/slices/repositories/repositoriesSlice'
 import { useAppSelector, useAppDispatch } from '@/store/store'
 
+/** Компоненты с пагинацией таблицы */
 export function RepoPagination() {
   const dispatch = useAppDispatch()
   const searchRepoParams = useAppSelector(repositoriesSlice.selectors.selectSearchParams)

@@ -7,6 +7,7 @@ import { RepoPagination } from './RepoPagination/RepoPagination'
 import { RepoTable } from './RepoTable/RepoTable'
 import classes from './RepoData.module.scss'
 
+/** Компонент в котором тригерится запрос данных и отображение результата в зависимости от статуса запроса */
 export function RepoData() {
   const dispatch = useAppDispatch()
   const { isLoading, errorMsg, params, result } = useSelector((state: AppState) => state.repositories)

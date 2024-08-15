@@ -16,6 +16,7 @@ const initialState: InitialState = {
   errorMsg: undefined,
 }
 
+/** Слайс отвечающий за репозитории */
 export const repositoriesSlice = createSlice({
   name: 'repositories',
   initialState,
@@ -94,5 +95,14 @@ export const fetchRepos = createAsyncThunk<SearchResult, SearchParamsObj, { reje
   }
 )
 
-export const { setRepoSearchParams, removeSortFromSearchParams, setSelectedRepo } = repositoriesSlice.actions
+
+export const {
+  /** Редюсер установки параметров поиска */
+  setRepoSearchParams,
+  /** Редюсер удаления сортировки */
+  removeSortFromSearchParams,
+  /** Редюсер установки выделенного репозитория */
+  setSelectedRepo,
+} = repositoriesSlice.actions
+/** Редюсер слайса репозиториев */
 export const repositoriesReducer = repositoriesSlice.reducer

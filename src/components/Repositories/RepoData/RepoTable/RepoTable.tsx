@@ -38,9 +38,11 @@ const columns: Array<ColumnDef<Repository>> = [
 ]
 
 type Props = {
+  /** Массив найденных репозиториев */
   data: Array<Repository>
 }
 
+/** Компонент в котором отображены данные найденных репозиториев в виде таблицы. */
 export function RepoTable({ data }: Props) {
   const containerRef = useRef<null | HTMLDivElement>(null)
   const dispatch = useAppDispatch()
